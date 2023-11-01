@@ -20,3 +20,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Display the table on the page
 sl.dataframe(fruits_to_show)
+
+import requests as rq
+fruityvice_response = rq.get("https://fruityvice.com/api/fruit/watermelon")
+sl.text(fruityvice_response)
