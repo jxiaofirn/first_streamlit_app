@@ -33,7 +33,7 @@ def get_fruityvice_data(this_fruit_choice):
 # fruityvise
 sl.header("Fruityvice Fruit Advice!")
 try:
-  fruit_choice = sl.text_input('What fruit would you like information about?')
+  fruit_choice = sl.text_input('What fruit would you like information about?', 'dragonfruit')
   if not fruit_choice:
     sl.error("Please select a fruit to get information.")
   else:
@@ -43,10 +43,10 @@ try:
 except URLError as e:
   sl.error()
 
+sl.stop()
+
 if fruit_choice:  
   sl.write('The user entered ', fruit_choice)
-
-sl.stop()
 
 # snowflake fruit load list
 sl.header("The fruit load list contains:")
