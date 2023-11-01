@@ -11,11 +11,11 @@ sl.text('🥑🍞 Avocado Toast')
 sl.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
 import pandas as pd
-my_fruit_list as mFruitL = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
-mFruitL = mFruitL.set_index('Fruit')
+my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+my_fruit_list = my_fruit_list.set_index('Fruit')
 
 # Let's put a pick list here so they can pick the fruit they want to include
-sl.multiselect("Pick some fruits:", list(mFruitL.index))
+sl.multiselect("Pick some fruits:", list(my_fruit_list.index))
 
 # Display the table on the page
-sl.dataframe(mFruitL)
+sl.dataframe(my_fruit_list)
