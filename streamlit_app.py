@@ -42,14 +42,14 @@ try:
 
 except URLError as e:
   sl.error()
-  
-sl.write('The user entered ', fruit_choice)
+
+if fruit_choice:  
+  sl.write('The user entered ', fruit_choice)
 
 sl.stop()
 
 # snowflake fruit load list
-if fruit_choice:
-  sl.header("The fruit load list contains:")
+sl.header("The fruit load list contains:")
 
 # get_fruit_load_list()
 def get_fruit_load_list():
