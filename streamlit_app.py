@@ -38,7 +38,7 @@ import snowflake.connector as sfc
 
 my_cnx = sfc.connect(**sl.secrets["snowflake"])
 my_cur = my_cnx.cursor()
-my_cur.execute("select 'test'")
+my_cur.execute("SELECT * FROM FRUIT_LOAD_LIST")
 my_data_row = my_cur.fetchone()
 sl.text("The fruit load list contains:")
 sl.text(my_data_row)
