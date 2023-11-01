@@ -22,7 +22,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 sl.dataframe(fruits_to_show)
 
 # New section to display fruitivise api response
-streamlit.header("Fruityvice Fruit Advice!")
+sl.header("Fruityvice Fruit Advice!")
 
 import requests as rq
 fruityvice_response = rq.get("https://fruityvice.com/api/fruit/watermelon")
