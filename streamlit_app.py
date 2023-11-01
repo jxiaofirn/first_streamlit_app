@@ -39,9 +39,8 @@ import snowflake.connector as sfc
 my_cnx = sfc.connect(**sl.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * FROM FRUIT_LOAD_LIST")
-my_data_row = my_cur.fetchone()
 sl.text("The fruit load list contains:")
-sl.text(my_data_row)
+my_data_row = my_cur.fetchone()
 
 # allow user to add a fruit to list
 add_my_fruit = sl.text_input('What fruit would you like to add?','')
