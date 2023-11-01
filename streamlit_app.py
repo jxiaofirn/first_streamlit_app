@@ -45,8 +45,11 @@ except URLError as e:
   
 sl.write('The user entered ', fruit_choice)
 
+sl.stop()
+
 # snowflake fruit load list
-sl.header("The fruit load list contains:")
+if fruit_choice:
+  sl.header("The fruit load list contains:")
 
 # get_fruit_load_list()
 def get_fruit_load_list():
